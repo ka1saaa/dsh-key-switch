@@ -1,0 +1,50 @@
+{
+  "name": "dsh-key-switch",
+  "version": "0.2.0",
+  "description": "DeepSeek Harness 多 API key 池 + 会话级 key 选择。密钥存 harness 凭据记录，每个会话可独立选一把 key，模型名带 1017 角标；可配合 dsh-whale-widget 显示当前会话 key 的余额。",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "docs",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ka1saaa/dsh-key-switch.git"
+  },
+  "scripts": {
+    "test": "node --test test/host.test.mjs test/client.test.mjs"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "api-key",
+    "credentials",
+    "per-session"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    }
+  }
+}

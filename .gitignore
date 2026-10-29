@@ -1,0 +1,21 @@
+# 依赖
+node_modules/
+pnpm-lock.yaml
+
+# 本机数据 / 密钥（本插件不落盘密钥，这里只是防御性忽略）
+.credentials.yaml
+*.credentials.yaml
+.env
+.env.*
+*.pem
+*.key
+
+# 日志 / 临时文件 / 编辑器
+*.log
+*.bak
+*.orig
+*.tmp
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

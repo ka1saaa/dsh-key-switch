@@ -1,0 +1,6 @@
+# dsh-key-switch bundle patch：宿主半（/dsh-key-switch-api/*）+ 客户端 settings.section。
+# 安装：dsh plugin --profile desktop add <path>，然后让 profile 加载本条目（重启或插件页启用）。
+# 纯 insert(id/name) 可热挂载；id 与包名一致，便于排查。
+- insert:
+    - id: dsh-key-switch
+      name: dsh-key-switch
